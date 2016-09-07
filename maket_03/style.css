@@ -1,0 +1,322 @@
+*, html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: arial;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.green {
+  color: #79bd00;
+}
+.blue {
+  color: #01c3fe;
+}
+.pink {
+  color: #db00ff;
+}
+.grey {
+  color: #888888;
+}
+.white {
+  color: #ffffff;
+}
+.underline {
+  text-decoration: underline;
+}
+/*/////////////HEADER/////////////*/
+.wrapper {
+  width: 100%;
+
+}
+.container {
+  margin-top: 0px;
+  width: 1000px;
+  margin: 0 auto;
+  background: #333;
+}
+.header-top {
+  color: #888;
+  background: #111;
+  height: 56px;
+  position: relative;
+}
+.menu {
+  top: 14px;
+  left: 77px;
+  position: absolute;
+}
+.menu-icon {
+  float: left;
+  list-style: none;
+  width: 27px;
+  height: 27px;
+  background: #232323;
+  margin-right: 13px;
+  border-radius: 4px;
+}
+.menu-icon:hover {
+  background: #353535;
+}
+.menu-icon-link {
+}
+.menu-icon-img {
+  width: 15px;
+  height: 16px;
+  background-repeat: no-repeat;
+  padding: 5px 0 0 6px;
+}
+.help {
+  position: absolute;
+  right: 48px;
+  top: 18px;
+  font-size: 20px;
+}
+.number {
+  color: white;
+}
+.header-middle {
+  background: #f2f2f2;
+  height: 527px;
+  border-top: 7px solid #dedede;
+  border-bottom: 7px solid #dedede;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  left: 46px;
+  top: 19px;
+  height: 86px;
+  width: 350px;
+}
+.logo-text {
+  position: absolute;
+  top: 24px;
+  left: 70px;
+  color: #111;
+  font-size: 38px;
+
+
+}
+.logo a {
+  text-decoration: none;
+}
+
+.header-middle-menu {
+  position: absolute;
+  top: 60px;
+  right: 48px;
+}
+.header-middle-menu-item {
+  float: left;
+  list-style: none;
+  top: 0px;
+  background: url("img/line.png") no-repeat 0% 0%;
+  margin-left: 16px;
+  padding-left: 16px;
+}
+.header-middle-menu-item:first-child {
+  background: none;
+}
+.header-middle-menu-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 18px;
+}
+.header-middle-menu-link:hover {
+  color: #dd00ff;
+}
+.simple {
+  position: absolute;
+  top: 155px;
+  left: 80px;
+  font-size: 75px;
+  line-height: 72px;
+}
+.text-2 {
+position: absolute;
+bottom:60px;
+left: 80px;
+text-transform: uppercase;
+font-size: 26px;
+letter-spacing: -2px;
+}
+
+.pc-big {
+  position: absolute;
+  right: 48px;
+  bottom: 16px;
+  z-index: 10;
+  width: 320px;
+  height: 389px;
+}
+
+.pc-middle {
+  position: absolute;
+  right: 226px;
+  bottom: 47px;
+  z-index: 8;
+}
+.pc-small {
+  position: absolute;
+  right: 344px;
+  bottom: 79px;
+  z-index: 6;
+}
+/*/////////////HEADER-END/////////////*/
+
+
+/*/////////////CONTENT/////////////*/
+h1 {
+  font-size: 45px;
+  font-weight: normal;
+
+}
+h2 {
+  font-weight: normal;
+  font-size: 28px;
+  margin-top: -7px;
+}
+.content {
+  padding:45px 0 50px 45px;
+  background-color: #111;
+}
+.content-table {
+  color: #888888;
+  display: table;
+  width: 236px;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.content-table-row {
+  display: table-row;
+
+}
+.content-table-cell {
+  display: table-cell;
+  border-bottom: 1px solid #1d1d1d;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.content-all {
+  width: 236px;
+  float: left;
+}
+.content-left {
+  padding-left: 35px;
+  padding-right: 33px;
+}
+.content-middle {
+  background: url("img/line-big.png")no-repeat 0% 50%;
+  padding-left: 38px;
+  padding-right: 30px;
+}
+.content-right {
+  background: url("img/line-big.png")no-repeat 0% 50%;
+  padding-left: 36px;
+}
+.content-table-row .content-table-cell:last-child {
+  text-align: right;
+}
+.register {
+  padding: 50px 0 50px 45px;
+  height: 336px;
+  background-color: #000;
+}
+.register-left {
+  float:left;
+  color: white;
+  padding-left: 39px;
+  width: 570px;
+}
+.register-right {
+  float: left;
+  color: white;
+  background: url("img/line-big.png") no-repeat 0 center;
+  width: 230px;
+  padding-left: 38px;
+  font-size: 12px;
+}
+.register-title {
+  font-size: 20px;
+}
+.domain-check-item {
+  list-style: none;
+}
+.form-text {
+  margin-top: 34px;
+  float: left;
+}
+input[type="text"] {
+  text-align: center;
+  color: white;
+  width: 167px;
+  height: 43px;
+  border: 1px solid #262626;
+  background-color: #262626;
+  background: url("img/ball.png") no-repeat center 7px;
+}
+input[type=checkbox] {
+cursor: pointer;
+}
+.domain-table {
+  display: table;
+  float: left;
+  margin-left: 35px;
+  margin-top: 22px;
+}
+.domain-check {
+  display: table-row;
+}
+.domain-check-item {
+  display: table-cell;
+  padding: 15px 0 15px 26px;
+}
+.register-right p {
+  margin-top: 30px;
+  line-height: 25px;
+}
+.menu-right {
+  margin-top: 45px;
+}
+.menu-item {
+  float: left;
+  list-style: none;
+}
+.menu-item:not(:first-child) {
+  background: url("img/line-grey.png") no-repeat 0 center;
+  padding-left: 14px;
+}
+.menu-item:not(:last-child) {
+  padding-right: 14px;
+}
+.menu-item-link {
+  color: white;
+  font-size: 12px;
+}
+.button-check {
+  width: 174px;
+  height: 46px;
+  background: url("img/button-check.png") no-repeat 0 center;
+  font-size: 20px;
+}
+.check-domain {
+  margin-left: 340px;
+}
+footer {
+  height: 78px;
+  background: #111111;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 43px;
+}
