@@ -419,7 +419,7 @@ h2 {
 }
 /*/////////////////content4/////////////////////////*/
 .content4 {
-
+  padding-bottom: 22px;
 }
 .block-25 {
   width: 25%;
@@ -434,10 +434,7 @@ h2 {
 }
 
 /*/////HOVER//////*/
- .conten4-pricing:hover .text-hover {
-   color: #1dde85;
-   margin-bottom: 26px;
- }
+
  .conten4-pricing:hover .pricing-hover{
   outline: 1px solid #1dde85;
   width: 266px;
@@ -450,6 +447,7 @@ h2 {
   color: #fffcf4;
   height: 90px;
   margin-top: 0px;
+  margin-bottom: 33px;
 }
 .conten4-pricing:hover .order-button {
   background-color: #1dde85;
@@ -459,6 +457,14 @@ h2 {
 }
 .conten4-pricing:hover {
   margin-bottom: -20px;
+}
+.conten4-pricing:hover .pricing-text {
+  margin-left:6px;
+}
+.conten4-pricing:hover .text-hover {
+  color: #1dde85;
+  margin-bottom: 26px;
+  margin-left: 0px;
 }
 /*///////////*/
 .pricing-text {
@@ -495,17 +501,17 @@ h2 {
 }
 .contact {
   background: url("img/footer-bg.png") no-repeat center center;
-  min-height: 500px;
   border-top: 1px solid transparent;
+  min-height: 498px;
+  background-size: 100%;
 }
 .contact h2 {
   color: #fffcf4;
   text-align: center;
-  margin: 32px 0 0 0;
+  padding: 32px 0 0 0;
 }
 .contact-form {
-  margin-left: 354px;
-  width: 900px;
+  margin-left: 354px
 }
 .contact-field {
   width: 418px;
@@ -533,7 +539,7 @@ h2 {
   display: block;
   width: 195px;
   height: 50px;
-  margin: 30px auto 0;
+  margin: 26px 0 0 351px;
   background-color: #1dde85;
   color: #fffcf4;
   font-size: 16px;
@@ -541,7 +547,7 @@ h2 {
 }
 /*////////FoOTER////////*/
 .footer {
-  height: 328px;
+  height: auto;
   color: #8f8e91;
   background-color: #151313;
 }
