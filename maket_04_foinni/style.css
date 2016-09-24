@@ -113,6 +113,14 @@ outline: 0;
   font-size: 18px;
 }
 /*//////////////////////MAIN//////////////////////////////*/
+.block-box-1 {
+  width: 100%;
+  margin-bottom: 48px;
+}
+.block-33 {
+  width: 33%;
+  float: left;
+}
 .main {
 }
 .headline-h2 {
@@ -138,18 +146,16 @@ h2 {
 }
 .block-container {
   margin-top: 77px;
+  width: 100%;
 }
 .block {
   border: 1px solid #cac8c5;
-  width: 356px;
   padding-top: 77px;
-  display: inline-block;
+  display: block;
   color: #969598;
 }
 .block:hover {
-  outline: 2px solid #1dde85;
-  border: 1px solid transparent;
-  width: 356px;
+  border: 1px solid #1dde85;
   padding-top: 77px;
   color: #454546;
 }
@@ -157,53 +163,51 @@ h2 {
   color: #1dde85;
 }
 .block-1 {
-  margin-right: 43px;
   background: url("img/1.png") no-repeat 50% 35px;
+  margin-right: 32px;
+}
+.block-2 {
+  background: url("img/2.png") no-repeat 50% 35px;
+  margin: 0 16px;
+}
+.block-3 {
+  background: url("img/3.png") no-repeat 50% 35px;
+  margin-left: 32px;
+}
+.block-4 {
+  background: url("img/4.png") no-repeat 50% 35px;
+  margin-right: 32px;
+}
+.block-5 {
+  background: url("img/5.png") no-repeat 50% 35px;
+  margin: 0 16px;
+}
+.block-6 {
+  background: url("img/6.png") no-repeat 50% 35px;
+  margin-left: 32px;
 }
 .block-1:hover {
   background: url("img/1g.png") no-repeat 50% 35px;
 }
-.block-2 {
-  margin-right: 43px;
-  background: url("img/2.png") no-repeat 50% 35px;
-}
 .block-2:hover {
   background: url("img/2g.png") no-repeat 50% 35px;
-}
-.block-3 {
-  background: url("img/3.png") no-repeat 50% 35px;
 }
 .block-3:hover {
   background: url("img/3g.png") no-repeat 50% 35px;
 }
-.block-4 {
-  margin-right: 43px;
-  margin-top: 48px;
-  background: url("img/4.png") no-repeat 50% 35px;
-}
 .block-4:hover {
   background: url("img/4g.png") no-repeat 50% 35px;
-}
-.block-5 {
-  margin-right: 43px;
-  margin-top: 48px;
-  background: url("img/5.png") no-repeat 50% 35px;
 }
 .block-5:hover {
   background: url("img/5g.png") no-repeat 50% 35px;
 }
-.block-6 {
-  margin-top: 48px;
-  background: url("img/6.png") no-repeat 50% 35px;
-}
 .block-6:hover {
-
   background: url("img/6g.png") no-repeat 50% 35px;
 }
 .block p {
   padding: 29px 0 22px;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 30px;
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -211,7 +215,7 @@ h2 {
   margin-bottom: 135px;
 }
 .content2 h2 {
-  margin: 120px auto 60px 528px;
+  margin:70px auto 60px 528px;
 }
 .team-container {
   margin-top: 69px;
@@ -315,7 +319,12 @@ h2 {
   float: left;
   list-style: none;
   margin-left: 2px;
+  width: 26px;
+  height: 18px;
+  background-repeat: no-repeat;
+  outline: none;
 }
+
 .social-img {
   width: 26px;
   height: 18px;
@@ -409,12 +418,18 @@ h2 {
   cursor: pointer;
 }
 /*/////////////////content4/////////////////////////*/
+.content4 {
+
+}
+.block-25 {
+  width: 25%;
+  float: left;
+}
 .content4 h2 {
   margin-top: 103px;
   text-align: center;
 }
 .conten4-pricing {
-  display: inline-block;
   margin: 50px 0 130px 20px;
 }
 
@@ -424,7 +439,7 @@ h2 {
    margin-bottom: 26px;
  }
  .conten4-pricing:hover .pricing-hover{
-  border: 1px solid #1dde85;
+  outline: 1px solid #1dde85;
   width: 266px;
   padding-top: -20px;
 }
@@ -440,6 +455,10 @@ h2 {
   background-color: #1dde85;
   border: 1px solid #1dde85;
   color: #fffcf4;
+  margin-bottom: 20px;
+}
+.conten4-pricing:hover {
+  margin-bottom: -20px;
 }
 /*///////////*/
 .pricing-text {
@@ -527,8 +546,8 @@ h2 {
   background-color: #151313;
 }
 .footer__top {
-  margin-bottom: 60px;
-
+  margin-bottom: 0px;
+  min-height: 328px;
 }
 .footer__column {
   width: 390px;
@@ -640,11 +659,5 @@ h2 {
   font-size: 16px;
   line-height: 70px;
   vertical-align: middle;
-
-
-}
-.footer__bottom-text{
-
-
-
+  margin-top: -5px;
 }
