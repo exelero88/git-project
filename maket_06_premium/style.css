@@ -1,0 +1,464 @@
+*, html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+  box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.centered {
+    margin: 0 auto;
+    max-width: 1024px;
+    min-width: 600px;
+}
+/*///////////////////HEADER\\\\\\\\\\\\\\\\\\\*/
+.header-top {
+    background-color: #fff;
+    margin-bottom: 12px;
+}
+.header-top__content {
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-bottom {
+    background-color: #4ccfc1;
+}
+.logo {
+    color: #4ccfc1;
+    text-decoration: none;
+    font-family: 'Lobster', sans-serif;
+    font-size: 3em;
+    margin-top: 10px;
+}
+.search__text {
+    border: 1px solid #e1e1e1;
+    margin-top: 26px;
+    padding:0 10px;
+    width: 400px;
+    height: 33px;
+    color: #2da89b;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+}
+.basket {
+    background: url('img/basket.png') no-repeat left center;
+    padding-left: 58px;
+    padding-top: 12px;
+    color: #a1a1a1;
+    text-decoration: none;
+    font-size: 1.7em;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10px;
+    margin-right: 35px;
+}
+.header-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.header-menu__item {
+    padding: 9px 0;
+    position: relative;
+}
+.header-menu__link {
+    padding-right: 19px;
+    border-right: 2px solid #fff;
+    display: block;
+    height: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    line-height: 18px;
+    vertical-align: middle;
+    transition: color 0.2s ease-in;
+
+}
+.header-menu__link:hover {
+    color: #bd3440;
+}
+.header-menu__link_no-border {
+    border: none;
+}
+/*///////////////////SUBMENU\\\\\\\\\\\\\\\\\\\*/
+.header-menu__submenu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    padding-top: 15px;
+    z-index: 20;
+}
+.header-menu__submenu_item{
+    width: 140px;
+}
+.header-menu__submenu_link {
+    height: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+.header-menu__submenu_link:hover {
+    color: #bd3440;
+}
+.header-menu__item:hover .header-menu__submenu {
+    display: block;
+}
+.header-menu__item:hover .header-menu__link {
+    color: #bd3440;
+}
+.header-menu__item:hover {
+    background: url('img/arrow.png') no-repeat 35% -1px;
+}
+
+/*///////////////////SLIDER\\\\\\\\\\\\\\\\\\\*/
+.banner {
+    background: url('img/background-green.jpg') repeat;
+    padding-bottom: 80px;
+}
+.wrapper {
+    width: 1024px;
+    height: 436px;
+    position: relative;
+}
+.slider {
+    height: inherit;
+    width: inherit;
+    position: relative;
+    /*background-color: #ddd; */
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, .5);*/
+}
+.wrapper > input {
+    display: none; /*Скрываем радио кнопки*/
+}
+.slides {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    /*transform: scale(1.2);*/
+}
+.slide1 {
+    background: url('img/apl/arsenal.png') no-repeat 20px 50px;;
+    background-size: 40%;
+}
+.slide2 {
+    background: url('img/apl/chelsea.png') no-repeat 20px 50px;
+    background-size: 40%;
+}
+.slide3 {
+    background: url('img/apl/liverpool.png') no-repeat 20px 50px ;
+    background-size: 40%;
+}
+.slide4 {
+    background: url('img/apl/mancity.png') no-repeat 20px 50px;
+    background-size: 40%;
+}
+.slide5 {
+    background: url('img/apl/manutd.png') no-repeat 20px 50px;
+    background-size: 40%;
+}
+.wrapper  .controls {
+    position: absolute;
+    bottom: -40px;
+    left: 450px;
+}
+.wrapper label {
+    cursor: pointer;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 13px;
+    transition: background ease-in-out 0.5s;
+}
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+    background: #fff;
+}
+.wrapper label::after {
+    border: 2px solid #fff;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    top: -4px;
+    left: -4px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity ease-in 0.5s;
+    /*transform: scale(1);*/
+}
+.slide-text {
+
+    padding: 100px 0 0 500px;
+}
+.slide-info {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding: 0 0 0 500px;
+}
+.slide-link {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    text-decoration:underline;
+    font-size: 50px;
+}
+.slide-link_arsenal:hover {
+    color: #f2012c;
+}
+.slide-link_chelsea:hover {
+    color: #182470;
+}
+.slide-link_liverpool:hover {
+    color: #b6312a;
+}
+.slide-link_mancity:hover {
+    color: #8acfff;
+}
+.slide-link_manutd:hover {
+    color: #e93b32;
+}
+/*///////////////////CATEGORIES\\\\\\\\\\\\\\\\\\\*/
+.categories {
+    display: flex;
+    justify-content: space-between;
+    height: 190px;
+}
+.categories__left {
+    background: url('img/shoes.jpg') no-repeat 5% 50%;
+    width: 33%;
+    text-decoration: none;
+    transition: transform 0.5s ease-in;
+}
+.categories__left:hover {
+    transform: scale(1.25);
+    border: none;
+}
+.categories__center {
+    /*border-right: 1px solid #e7e7e7;*/
+    background: url('img/t-shirt.jpg') no-repeat 5% 50%;
+    width: 33%;
+    text-decoration: none;
+    transition: transform 0.5s ease-in;
+}
+.categories__center:hover  {
+    transform: scale(1.25);
+    border: none;
+}
+.categories__center:hover .categories__left {
+    border: none;
+}
+.categories__right {
+    background: url('img/shoes.jpg') no-repeat 5% 50%;
+    width: 33%;
+    text-decoration: none;
+    transition: transform 0.5s ease-in;
+}
+.categories__right:hover {
+    transform: scale(1.25);
+    border: none;
+}
+.categories__text {
+    color: #afafaf;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 51px 0 0 210px;
+    line-height: 1.2;
+}
+.button__categories {
+    margin: 19px 0 0 210px;
+    background-color: #3cc395;
+    width: 59px;
+    height: 32px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+}
+.button__categories:hover{
+    color: #bd3440;
+}
+/*///////////////////featured-products-top \\\\\\\\\\\\\\\\\\\*/
+.featured-products-top {
+    background: url('img/background-green.jpg') repeat;
+    box-shadow: inset 0 2px 8px -5px #000;
+}
+.featured-products-top__text {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 16px 0 16px 60px;
+}
+/*///////////////////featured-products-bottom \\\\\\\\\\\\\\\\\\\*/
+.featured-products-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 66px;
+}
+.featured-products-bottom__item {
+    width: 255px;
+    height: 255px;
+    margin: 46px 15px 0 15px;
+    box-shadow:
+        inset 0 -1px 0 0 #f6f6f6,
+        inset 0 -2px 0 0 #e4e4e4,
+        inset 0 -7px 0 0 #3cc395,
+
+        inset 0 1px 0 0 #f6f6f6,
+        inset 0 2px 0 0 #e4e4e4,
+
+        inset 1px 0 0 0 #f6f6f6,
+        inset 2px 0 0 0 #e4e4e4,
+
+        inset -1px 0 0 0 #f6f6f6,
+        inset -2px 0 0 0 #e4e4e4;
+    padding-bottom: 40px;
+    border-radius: 1px;
+    transition: box-shadow 0.2s ease-in;
+}
+.featured-products-bottom__item_1 {
+    background: url('img/lobouten.jpg') no-repeat 50% 12%;
+}
+.featured-products-bottom__item_2 {
+    background: url('img/t-shirt-blue.jpg') no-repeat 50% 14%;
+}
+.featured-products-bottom__item_3 {
+    background: url('img/t-shirt-grey.jpg') no-repeat 50% 16%;
+}
+.featured-products-bottom__item_4 {
+    background: url('img/portmone.jpg') no-repeat 50% 12%;
+}
+.featured-products-bottom__item_5 {
+    background: url('img/bag.jpg') no-repeat 50% 12%;
+}
+.featured-products-bottom__item_6 {
+    background: url('img/t-shirt-grey.jpg') no-repeat 50% 12%;
+}
+.featured-products-bottom__text {
+    color: #afafaf;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 155px;
+    text-align: center;
+}
+.button__featured {
+    margin: 10px 0 0 10px;
+    background-color: #3cc395;
+    width: 74px;
+    height: 34px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+.featured-products-bottom__price {
+    color: #afafaf;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-left: 65px;
+    padding-top: 20px;
+    vertical-align: text-top;
+}
+.featured-products-bottom__item:hover {
+    box-shadow:
+        inset 0 -1px 0 0 #f6f6f6,
+        inset 0 -2px 0 0 #e4e4e4,
+        inset 0 -7px 0 0 #bd3440,
+
+        inset 0 1px 0 0 #f6f6f6,
+        inset 0 2px 0 0 #e4e4e4,
+
+        inset 1px 0 0 0 #f6f6f6,
+        inset 2px 0 0 0 #e4e4e4,
+
+        inset -1px 0 0 0 #f6f6f6,
+        inset -2px 0 0 0 #e4e4e4;
+}
+.featured-products-bottom__item:hover .button__featured {
+    background-color: #bd3440;
+}
+/*///////////////////FOOTER\\\\\\\\\\\\\\\\\\\*/
+.footer-top {
+    background-color: #3cc3b5;
+}
+.table {
+    display: table;
+    margin-left: 37px;
+    width: 100%;
+    padding:32px 0 38px;
+}
+.table__row {
+    display: table-row;
+}
+.table__cell {
+    display: table-cell;
+    width: 25%;
+    padding: 10px 0 0;
+}
+.table__cell_header {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 25%;
+}
+.table__link {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+.table__link:hover {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    text-decoration:underline;
+}
+.footer-bottom {
+    background: #2da89b;
+    height: 46px;
+}
+.footer-bottom__text {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 46px;
+}
